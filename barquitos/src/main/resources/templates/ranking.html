@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="/navegacionEstilo.css"/>
+</head>
+
+<body>
+  <div class="elementoCentral">
+
+    <div  id="tituloRanking" class="tituloCentral">
+        <h2>Ranking de  usuarios</h2>
+    </div>
+    <br>
+    <br>
+    <div id="contenedorRanking">
+      <table id="ranking">
+        <th>
+          <th>Usuario</th>
+          <th>Victorias</th>
+          <th>Derrotas</th>
+        </th>
+  
+        <tr th:each="usuario:${listaUsuarios}">
+          <td name="posicion" th:text="${listaUsuarios.indexOf(usuario)+1}"></td>
+          <td name="username" th:text="${usuario.userName}"></td>
+          <td name="victorias" th:text="${usuario.victorias}"></td>
+          <td name="derrotas" th:text="${usuario.derrotas}"></td>
+        </tr>
+      </table>
+  
+    </div>
+    </div>
+    
+    
+</body>
+
+</html>

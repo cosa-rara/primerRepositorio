@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="/tableroEstilo.css"/>
+	<script type="text/javascript" src="/tablero.js"></script>
+</head>
+
+<body>
+
+	<div id="tableroFaseDisparos">
+
+		<div id="tableroDisparos">
+			<table>
+				<tr th:each="fila:${tableroDisparos.tableroDisparos}">
+					<td th:each="casilla:${fila}">
+						<button th:id="${casilla.letra}+${casilla.numero}" 
+						class="botonCasilla" onclick="disparar(this)"
+						th:text="${casilla.letra}+${casilla.numero}"
+						th:data-ocupacion="${casilla.ocupacion}">
+						 </button>
+					</td>
+	
+				</tr>
+			</table>
+		</div>
+		<br>
+
+		<div id="tableroBarcos">
+			<table>
+				<tr th:each="fila:${tableroBarcos.tableroBarcos}">
+					<td th:each="casilla:${fila}">
+						<div th:id="${casilla.letra}+${casilla.numero} +mio" 
+							 th:data-ocupacion="${casilla.ocupacion}"
+							 th:class="casillaOcupada +${casilla.ocupacion}"
+							 name="casillasJugador"> 
+								
+						</div>
+					</td>
+	
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+
+	<div id="overlayFinPartida">.</div>
+	<button id="botonSalir" onclick="grabarPartida()">
+		Salir
+	</button>
+
+
+	<form id="formularioFinPartida" th:action="@{/faseDisparos}" method="post">
+		<input type="hidden" name="resultado">
+	</form>
+
+
+
+	<div th:id="user" th:name="${session.usuario.userName}"
+			th:text="${session.usuario.userName}">
+	</div>
+	
+
+
+
+</body>
+
+</html>

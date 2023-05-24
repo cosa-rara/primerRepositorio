@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/registroEstilo.css"/>
+</head>
+
+<body>
+
+    <div class="contenedorCentral">
+
+        <h1>Registro</h1>
+
+        <form th:action="@{/inicio/registro}" method="post"
+            id="formularioRegistro">
+
+         <label>Username</label>
+            <input type="text" name="userName">
+         <br>
+
+            <label>Password</label>
+            <input type="text" name="password" class="input">
+            <br>
+            <input type="submit" class="input">
+            <br>
+            <input type="hidden" name="victorias" value="0">
+            <input type="hidden" name="derrotas" value="0">
+            <input type="hidden" name="posicion" value="0">
+
+        </form>
+
+    </div>
+    
+
+</body>
+
+</html>

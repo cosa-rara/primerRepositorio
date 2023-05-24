@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    
+    <div class="elementoCentral">
+        <form th:action="@{/inicio/login}" method="post" id="formularioLogin">
+            <label>Username</label>
+            <input id="username" name="username" type="text">
+    
+            <label>Password</label>
+            <input id="password" name="password" type="text">
+    
+            <input type="submit">
+        </form>
+    </div>
+
+    
+
+</body>
+
+</html>

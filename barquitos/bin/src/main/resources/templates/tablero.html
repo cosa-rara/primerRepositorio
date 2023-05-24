@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="/tableroEstilo.css"/>
+	<script type="text/javascript" src="/tablero.js"></script>
+</head>
+
+<body>
+
+	<div id="tablero">
+
+		<div id="tableroDisparos">
+			<table>
+				<tr th:each="fila:${tableroDisparos.tableroDisparos}">
+					<td th:each="casilla:${fila}">
+						<button th:id="${casilla.letra}+${casilla.numero}" class="botonCasilla" onclick="clickCasilla(this)"
+						th:text="${casilla.letra}+${casilla.numero}"> </button>
+					</td>
+	
+				</tr>
+			</table>
+		</div>
+		<br>
+		
+		<div id="tableroBarcos">
+			<table>
+				<tr th:each="fila:${tableroBarcos.tableroBarcos}">
+					<td th:each="casilla:${fila}">
+						<button th:id="${casilla.letra}+${casilla.numero}" class="botonCasilla" onclick="clickCasilla(this)"
+						th:text="${casilla.letra}+${casilla.numero}"> </button>
+					</td>
+	
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+	
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="/tableroEstilo.css"/>
+		<script type="text/javascript" src="/tablero.js"></script>
+	</head>
+
+	<body>
+
+		<div id="titulo">Coloca tus barcos</div>
+	
+		<div id="tableroColocacion">
+	
+		<div id="tableroBarcos">
+			<table>
+				<tr th:each="fila:${tableroBarcos.tableroBarcos}">
+					<td th:each="casilla:${fila}">
+						<button th:id="${casilla.letra}+${casilla.numero}" 
+								class="botonCasilla" onclick="clickCasilla(this)"
+								th:text="${casilla.letra}+${casilla.numero}"> </button>
+					</td>
+	
+				</tr>
+			</table>
+		</div>
+
+		
+
+		<form action="/faseColocacion" method="post">
+			<input id="acorazado" type="hidden" name="acorazadoPosiciones" value="">
+			<br>
+			<input id="submarino1" class="submarino" type="hidden" name="submarino1Posiciones" value="">
+			<br>
+			<input id="submarino2" class="submarino" type="hidden" name="submarino2Posiciones" value="">
+			<br>
+			<input id="destructor" class="destructor" type="hidden" name="destructorPosiciones" value="">
+			<br>
+			<input id="fragata" class="fragata" type="hidden" name="fragata1Posiciones" value="">
+			<br>
+			<input id="fragata" class="fragata" type="hidden" name="fragata2Posiciones" value="">
+			<br>			
+			<input type="submit" value="empezar">
+		</form>
+
+		</div>
+
+		<div id="puerto">
+
+			
+			<div class="barco" th:each="barco:${listaBarcos.lista}">
+				<button  th:data-longitud="${barco.longitud}" th:data-nombre="${barco.nombre}" 
+							th:onclick="efectosSeleccionBarco();funcionColocar(this.getAttribute('data-nombre'),this.getAttribute('data-longitud'))"
+							 th:name="${barco.nombre}" class="botonBarco">
+				<p th:text="${barco.nombre}"></p>
+				</button>
+				<br>
+				<br>
+			</div>
+			
+
+		</div>
+
+		<div id="overlay"></div> 
+
+
+	</body>
+</html>

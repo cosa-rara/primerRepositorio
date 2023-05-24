@@ -1,0 +1,185 @@
+@charset "ISO-8859-1";
+body{
+    background-size:cover;
+    background-blend-mode: luminosity;
+    background-repeat:no-repeat;
+    
+    background-image: url("https://png.pngtree.com/background/20230416/original/pngtree-water-ocean-texture-green-picture-image_2444054.jpg");
+}
+
+#titulo{
+    
+    position: relative;
+    width: 390px;
+    height: 15%;
+    top: 100px;
+    left: 30%;
+    z-index: 2;
+
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: rgba(18, 39, 10, 0.718) 0px 5px 15px;
+    background-color: rgba(104, 124, 158, 0.996);
+
+    text-align: center;
+    font-size:200%;
+
+}
+
+
+.botonCasilla{
+
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 5px;
+    z-index: 3;
+
+    border-radius: 5px;
+    border-style: none;
+
+
+    
+}
+.casillaOcupadafalse{
+
+    width: 35px;
+    height: 35px;
+    position: relative;
+    z-index: 3;
+    background-color: rgb(78, 118, 198);
+    border-radius: 2px;
+
+}
+.casillaOcupadatrue{
+
+    width: 35px;
+    height: 35px;
+    position: relative;
+    z-index: 3;
+    background-color: rgb(77, 80, 85);
+    border-radius: 2px;
+
+}
+
+#tableroColocacion{
+
+    position: relative;
+    left: 30%;
+    top: 150px;
+}
+
+#tableroFaseDisparos{
+
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+
+#cara{
+    
+    box-sizing: border-box;
+
+    transform: rotate3d(1, 0, 0, 0.1turn);
+}
+
+#puerto{
+	
+	border-style: none;
+    border-radius: 10px;
+
+    background-color: rgba(57, 105, 141, 0.639);
+
+    position: absolute;
+    left: 1050px;
+    top : 200px;
+
+    width: 150px;
+
+    align-items: center;
+
+}
+.botonBarco{
+    background-color: rgb(107, 116, 123);
+    color: rgb(255, 255, 255);
+    border-style: none;
+    border-radius: 5px;
+    width: 125px;
+
+    margin: auto;
+    
+}
+
+#seleccionBarco{
+	
+	background-color: rgb(246, 232, 112);
+
+    position: relative;
+    left: 0%;
+    top : 60%;
+
+    width: 500px;
+    height: 250px;
+	
+}
+#barcoSeleccionado{
+	
+	height:35px;
+	width: 190px;
+
+    background-color: rgb(67, 73, 67);
+}
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+#disparoEnemigo{
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+#overlayFinPartida {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    cursor: pointer;
+
+    text-align: center;
+    font-size:300%;
+}
+#botonSalir{
+    position: fixed;
+    display: none;
+    width: 20%;
+    height: 10%;
+    top: 30%;
+    left: 40%;
+    z-index: 4;
+
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgba(218, 235, 247, 0.821);
+
+    text-align: center;
+    font-size:150%;
+
+
+}
+

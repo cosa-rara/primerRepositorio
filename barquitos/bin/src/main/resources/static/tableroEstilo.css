@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+.botonCasilla{
+
+    width: 35px;
+    height: 35px;
+	
+	
+}
+
+#tablero{
+
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+
+#cara{
+    
+    box-sizing: border-box;
+
+    transform: rotate3d(1, 0, 0, 0.1turn);
+}
+
